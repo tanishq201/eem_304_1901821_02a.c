@@ -1,0 +1,56 @@
+#include <stdio.h>
+void insertionSort(int a[], int N,int choice) 
+{
+switch (choice)
+{
+    case 0:  for(int i=1; i<(N); i++)
+    {
+       int j=i;
+        while(j>0 && a[j]<a[j-1])
+        {
+           int temp=a[j];
+            a[j]=a[j-1];
+            a[j-1]=temp;
+             
+            --j;
+        }
+    }
+      { 
+  for (int i = 0; i < N; i++) 
+    printf("%d ", a[i]);
+        
+    }
+        break;
+    case 1:  for(int i=1; i<(N); i++)
+    {
+       int j=i;
+        while(j>0 && a[j]>a[j-1])
+        {
+            int temp=a[j];
+            a[j]=a[j-1];
+            a[j-1]=temp;
+             
+            --j;
+        }
+    }
+      { 
+  for (int i = 0; i < N; i++) 
+    printf("%d ", a[i]);
+        
+    }
+        break;
+ }
+   
+  
+}
+int main() 
+{  
+    int size,s;
+  scanf("%d",&size);
+  scanf("%d",&s);
+  int array[size];
+  for(int l = 0; l < size; l++)
+    scanf("%d",&array[l]);
+ insertionSort(array,size,s);
+return 0;
+}
